@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<!-- 根标签 -->
+<struts>
+	<!--配置包，包名为default ,该包继承了Struts2框架的默认包Struts-default  -->
+	<package name="default" namespace="/" extends="struts-default" >
+	<!--定义名为hello的Action ，该Action的处理类为com.action.TestAction,并映射到success.jsp页面  -->
+		<action name="hello" class="Action.CarousalAction">
+			<result name="success">/admin/index.jsp</result>
+			<result name="NewsManager">/admin/NewsManager.jsp</result>
+		</action>
+		<action name="News" class="Action.NewsAction">
+			<result name="success">/admin/index.jsp</result>
+			<result name="NewsManager">/admin/NewsManager.jsp</result>
+		</action>		
+	</package> 
+	<!-- <constant name="struts.multipart.saveDir" value="/temp"/>
+	<constant name="struts.multipart.maxSize" value="3048576000"/>  -->
+</struts>
